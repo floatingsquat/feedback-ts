@@ -1,8 +1,11 @@
-import React from 'react'
 
+import styles from './style.module.scss'
 function Logo() {
   return (
-    <div>Logo</div>
+    <div className={styles.logo}>
+      <h1>Feedback</h1>
+      <b>Board</b>
+    </div>
   )
 }
 

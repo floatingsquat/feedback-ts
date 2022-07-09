@@ -1,0 +1,15 @@
+.tagItem {
+  padding: 10px 20px;
+  width: min-content;
+  background-color: var(--light-gray);
+  border-radius: 16px;
+  font-weight: 600;
+  color: var(--dark-blue);
+
+  &:hover {
+    color: var(--white);
+    background-color: var(--dark-blue);
+    cursor: pointer;
+    transition: background-color 0.2s ease-out;
+  }
+}

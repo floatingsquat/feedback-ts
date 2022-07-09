@@ -20,6 +20,8 @@ function Navbar() {
       </div>
       <div className={styles.buttonWrapper}>
       <button className={styles.buttonPrimary}>+ Add Feedback</button>
+
+
       </div>
       
     </div>

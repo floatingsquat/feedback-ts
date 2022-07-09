@@ -1,8 +1,14 @@
-import React from 'react'
+import { ReactNode } from 'react'
+import styles from './style.module.scss'
+interface Props {
+  item?: ReactNode
 
-function TagItem() {
+}
+  function TagItem ({ item }: Props) {
   return (
-    <div>TagItem</div>
+    <div className={styles.tagItem}>
+      {item}
+    </div>
   )
 }
 

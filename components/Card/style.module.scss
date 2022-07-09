@@ -1,0 +1,13 @@
+.card {
+  display: flex;
+  padding: 30px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+  gap: 40px;
+
+  .content {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}

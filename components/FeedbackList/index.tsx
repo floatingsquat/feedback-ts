@@ -1,8 +1,14 @@
-import React from 'react'
-
+import Card from '../Card'
+import styles from './style.module.scss'
 function FeedbackList() {
   return (
-    <div>FeedbackList</div>
+    <div className={styles.feedbackList}>
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+    </div>
   )
 }
 

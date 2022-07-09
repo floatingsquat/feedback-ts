@@ -2,8 +2,11 @@
   --black: #000;
   --white: #fff;
   --gray: #a6a6a6;
+  --dark-gray: #676767;
+  --light-gray: #f2f4ff;
   --pink: #ae1feb;
-  --dark-green: #489e7d;
-
+  --dark-pink: #77189f;
+  --green: #489e7d;
+  --dark-blue: #4661e6;
   --font-size-md: 18px;
 }

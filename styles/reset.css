@@ -33,6 +33,7 @@ body {
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  background: #f7f8fd;
 }
 /*
   6. Improve media defaults
@@ -84,6 +85,16 @@ button {
   border: 0;
   background-color: transparent;
   cursor: pointer;
+}
+select {
+  outline: none;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  color: inherit;
+}
+option {
+  color: var(--black);
 }
 label {
   font-weight: lighter;

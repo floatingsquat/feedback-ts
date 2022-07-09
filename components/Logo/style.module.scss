@@ -1,0 +1,20 @@
+.logo {
+  background: rgb(109, 145, 242);
+  background: linear-gradient(
+    90deg,
+    rgba(109, 145, 242, 1) 0%,
+    rgba(173, 78, 230, 1) 37%,
+    rgba(215, 112, 159, 1) 100%
+  );
+  max-width: 300px;
+  width: 100%;
+  padding: 50px;
+  border-radius: 10px;
+  color: var(--white);
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(0.98);
+    transition: scale 0.7s ease-in-out;
+  }
+}
