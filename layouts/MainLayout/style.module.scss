@@ -5,11 +5,15 @@
   max-width: 1180px;
   width: 100%;
   margin: 0 auto;
-  // margin-left: auto;
-  // margin-right: auto;
-  //background-color: grey;
 
   main {
     width: 100%;
+  }
+}
+
+@media (max-width: 960px) {
+  .mainLayout {
+    flex-direction: column;
+    padding: 30px;
   }
 }
