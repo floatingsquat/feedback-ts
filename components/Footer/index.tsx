@@ -1,5 +1,5 @@
-import Image from 'next/image'
 import styles from './style.module.scss'
+import { FcCopyright } from 'react-icons/fc';
 
 function Footer() {
   return (
@@ -7,9 +7,10 @@ function Footer() {
     <a
       href="#"
     >
-      Powered by{' '}
+       <FcCopyright className={styles.icon}/>
+       Feedback Board App 
       <span className={styles.logo}>
-        <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+       
       </span>
     </a>
   </footer>
