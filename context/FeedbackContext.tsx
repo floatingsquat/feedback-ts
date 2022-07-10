@@ -1,23 +1,8 @@
-import React, { createContext, Dispatch, useReducer, useContext } from 'react';
+import React, { createContext, useReducer, useContext } from 'react';
+import {FeedbackState, FeedbackDispatch, Action} from '../types'
 
-export type Feedback = {
-    id: number;
-    title: string;
-    desc: boolean;
-    tags: [];
-    vote: number;
-};
-
-export type FeedbackState = Feedback[];
 
 const FeedbackStateContext = createContext<FeedbackState | undefined>(undefined);
-
-type Action =
-  | { type: 'ADD_FEEDBACK'; data: Feedback }
-  | { type: 'DELETE_FEEDBACK'; id: number }
-  | { type: 'VOTE_FEEDBACK'; id: number };
-
-type FeedbackDispatch = Dispatch<Action>;
 const FeedbackDispatchContext = createContext<FeedbackDispatch | undefined>(
   undefined
 );
