@@ -11,7 +11,12 @@ function Modal({toggle, action} : Modal) {
 const dispatch = useFeedbackDispatch();
 const [title, setTitle] = useState('');
 const [desc, setDesc] = useState('');
-const [tags, setTags] = useState('');
+const [tags, setTags] = useState([""]);
+
+const StringToArray = (tags : string) => {
+let arr = tags.split(',');
+return arr;
+}
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -21,13 +26,14 @@ const [tags, setTags] = useState('');
         id: 0,
         title: title,
         desc: desc,
-        tags: ["55","552"],
+        tags: tags,
         vote:1,
       }
     });
     setTitle("");
     setDesc("");
-    setTags("");
+   setTags([""]);
+    
 
   }
   return (
@@ -46,7 +52,7 @@ const [tags, setTags] = useState('');
         <label htmlFor='desc'>Description:</label>
         <input value={desc} type="text" id="desc" placeholder='e.g. A comment field can be added so that users can comment.' onChange={(e)=> setDesc(e.target.value)}/>
         <label htmlFor='tags'>Tags:</label>
-        <input value={tags} type="text" id="tags" placeholder='e.g. Entertainment, UI, UX, Bug...' onChange={(e)=> setTags(e.target.value)}/>
+        <input value={tags} type="text" id="tags" placeholder='e.g. Entertainment, UI, UX, Bug...' onChange={(e)=> setTags(StringToArray(e.target.value) )}/>
         <Button>Save Feedback</Button>
         </div>
       </form>

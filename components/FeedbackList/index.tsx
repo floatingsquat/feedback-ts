@@ -7,7 +7,7 @@ function FeedbackList() {
     <div className={styles.feedbackList}>
       {feedbacks.length ? (feedbacks.map(feedback => (
         <Card feedback={feedback} key={feedback.id}/>
-      ))) : <h2>There is no any feedback yet!</h2>}
+      ))) : <h3>There is no any feedback yet!</h3>}
       
       
     </div>
