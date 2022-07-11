@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useFeedbackDispatch } from '../../context/FeedbackContext';
+import { StringToArray } from '../../utils/stringToArray';
 import Button from '../Button';
 import styles from './style.module.scss'
 
@@ -12,11 +13,6 @@ const dispatch = useFeedbackDispatch();
 const [title, setTitle] = useState('');
 const [desc, setDesc] = useState('');
 const [tags, setTags] = useState([""]);
-
-const StringToArray = (tags : string) => {
-let arr = tags.split(',');
-return arr;
-}
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
