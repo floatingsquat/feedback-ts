@@ -9,7 +9,7 @@ import MainLayout from '../layouts/MainLayout'
 const Home: NextPage = () => {
   return (
     <FeedbackContextProvider>
-    <MainLayout>
+       <MainLayout>
       <Navbar />
       <FeedbackList />
       <Footer />

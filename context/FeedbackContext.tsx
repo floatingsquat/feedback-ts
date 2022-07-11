@@ -42,13 +42,13 @@ export function FeedbackContextProvider({
   );
 }
 
-export function useFeedbackstate() {
+export function useFeedbackState() {
   const state = useContext(FeedbackStateContext);
   if (!state) throw new Error('Feedback Provider not found');
   return state;
 }
 
-export function useFeedbacksDispatch() {
+export function useFeedbackDispatch() {
   const dispatch = useContext(FeedbackDispatchContext);
   if (!dispatch) throw new Error('Feedback Provider not found');
   return dispatch;

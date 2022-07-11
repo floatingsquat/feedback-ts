@@ -1,6 +1,20 @@
 import styles from './style.module.scss'
 import { RiFeedbackLine } from 'react-icons/ri';
+import Button from '../Button';
+import { useFeedbackDispatch } from '../../context/FeedbackContext';
+import Modal from '../Modal';
+import { useState } from 'react';
+
 function Navbar() {
+  const dispatch = useFeedbackDispatch();
+  const [showModal, setShowModal] = useState(false);
+  const showModalOnClickHandler = () => {
+    setShowModal(!showModal)
+    console.log("handler çalıştı")
+  }
+
+
+
   return (
     <div className={styles.navbar}>
       <div className={styles.filterWrapper}>
@@ -19,12 +33,12 @@ function Navbar() {
       </span></div>
       </div>
       <div className={styles.buttonWrapper}>
-      <button className={styles.buttonPrimary}>+ Add Feedback</button>
-
-
+      <Button onClick ={showModalOnClickHandler}>+ Add Feedback</Button>
+      <Modal toggle={showModal} action={showModalOnClickHandler}/>
       </div>
       
     </div>
+   
   )
 }
 
