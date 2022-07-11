@@ -1,11 +1,14 @@
 import styles from './style.module.scss'
 import { AiOutlineArrowUp } from 'react-icons/ai';
 
-function RatingItem() {
+type voteProps = {
+  vote: number
+}
+function RatingItem({vote} : voteProps) {
   return (
     <div className={styles.rating}>
       <button><AiOutlineArrowUp /></button>
-      <small>122</small>
+      <small>{vote}</small>
     </div>
   )
 }

@@ -3,8 +3,8 @@ import { Dispatch } from "react";
 export type Feedback = {
     id: number;
     title: string;
-    desc: boolean;
-    tags: [];
+    desc: string;
+    tags: Array<string>;
     vote: number;
 };
 

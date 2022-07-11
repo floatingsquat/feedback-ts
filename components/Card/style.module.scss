@@ -9,5 +9,11 @@
     display: inline-flex;
     flex-direction: column;
     gap: 10px;
+
+    .tagList {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+    }
   }
 }

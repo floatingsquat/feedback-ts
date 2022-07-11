@@ -12,7 +12,7 @@ function feedbackReducer(state: FeedbackState, action: Action): FeedbackState {
     case 'ADD_FEEDBACK':
       const nextId = Math.max(...state.map(feedback => feedback.id)) + 1;
       return state.concat({
-        id: nextId,
+            id: nextId,
             title: action.data.title,
             desc: action.data.desc,
             tags: action.data.tags,
