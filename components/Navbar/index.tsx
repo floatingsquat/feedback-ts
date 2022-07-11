@@ -34,7 +34,7 @@ function Navbar() {
       </div>
       <div className={styles.buttonWrapper}>
       <Button onClick ={showModalOnClickHandler}>+ Add Feedback</Button>
-      <Modal toggle={showModal} action={showModalOnClickHandler}/>
+      <Modal toggle={showModal} action={showModalOnClickHandler} />
       </div>
       
     </div>

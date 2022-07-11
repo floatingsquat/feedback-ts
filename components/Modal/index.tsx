@@ -3,11 +3,10 @@ import Button from '../Button';
 import styles from './style.module.scss'
 
 type Modal = {
-  toggle: boolean;
+  toggle: any;
   action: ()=> void;
 }
 function Modal({toggle, action} : Modal) {
-
   return (
  
     toggle && (
