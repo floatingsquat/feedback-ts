@@ -1,4 +1,5 @@
 import React, { createContext, useReducer, useContext } from 'react';
+import { data } from '../data';
 import {FeedbackState, FeedbackDispatch, Action} from '../types'
 
 
@@ -22,7 +23,6 @@ function feedbackReducer(state: FeedbackState, action: Action): FeedbackState {
     case 'DELETE_FEEDBACK':
       return state.filter(feedback => feedback.id !== action.id);
     case 'VOTE_FEEDBACK':
-      //const feedbackId = state.find((x) => x.id === action.id)
       return state.map((x)=> x.id === action.id ? {...x, vote:x.vote +1} : x)
     default: 
       console.error(`Unhandled action type`);
@@ -35,7 +35,7 @@ export function FeedbackContextProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const [feedbacks, dispatch] = useReducer(feedbackReducer, []);
+  const [feedbacks, dispatch] = useReducer(feedbackReducer, data);
 
   return (
     <FeedbackDispatchContext.Provider value={dispatch}>
