@@ -18,10 +18,14 @@ function feedbackReducer(state: FeedbackState, action: Action): FeedbackState {
             tags: action.data.tags,
             vote: action.data.vote,
       });
+
     case 'DELETE_FEEDBACK':
       return state.filter(feedback => feedback.id !== action.id);
-      default: 
-      console.error(`Unhandled action type ${action.type}`);
+    case 'VOTE_FEEDBACK':
+      //const feedbackId = state.find((x) => x.id === action.id)
+      return state.map((x)=> x.id === action.id ? {...x, vote:x.vote +1} : x)
+    default: 
+      console.error(`Unhandled action type`);
       return state;
   }
 }

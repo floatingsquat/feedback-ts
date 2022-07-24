@@ -28,7 +28,7 @@ const [tags, setTags] = useState([""]);
     });
     setTitle("");
     setDesc("");
-   setTags([""]);
+    setTags([""]);
     
 
   }

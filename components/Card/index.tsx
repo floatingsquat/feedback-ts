@@ -12,7 +12,7 @@ function Card({feedback}: FeedbackCardProps) {
   return (
     <div className={styles.card}>
       <div className={styles.voteWrapper}>
-        <RatingItem vote={feedback.vote} />
+        <RatingItem feedback={feedback} />
       </div>
       <div className={styles.content}>
         <h3>{feedback.title}</h3>

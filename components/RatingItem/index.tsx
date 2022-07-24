@@ -1,14 +1,29 @@
 import styles from './style.module.scss'
 import { AiOutlineArrowUp } from 'react-icons/ai';
+import { useFeedbackDispatch } from '../../context/FeedbackContext';
+import { Feedback } from '../../types';
 
 type voteProps = {
-  vote: number
+  feedback: Feedback
 }
-function RatingItem({vote} : voteProps) {
+
+
+
+function RatingItem({feedback} : voteProps) {
+  const dispatch = useFeedbackDispatch();
+  const onClickHandler = (e: React.FormEvent) => {
+    e.preventDefault();
+    dispatch({
+      type: "VOTE_FEEDBACK",
+      id: feedback.id
+    });
+  
+  }
+
   return (
     <div className={styles.rating}>
-      <button><AiOutlineArrowUp /></button>
-      <small>{vote}</small>
+      <button onClick={onClickHandler}><AiOutlineArrowUp /></button>
+      <small>{feedback.vote}</small>
     </div>
   )
 }
