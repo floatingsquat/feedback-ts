@@ -9,13 +9,17 @@ type Props = {
 
 function TagList ({ item }: Props) {
  const feedbacks = useFeedbackState();
-
+ const arr: string[] = [];
   return(
     <div className={styles.tagList}>
     {feedbacks.length ? feedbacks.map(feedback => (
-      feedback.tags.map(item => (
-        <TagItem item={item} />
-      ))
+      feedback.tags.map(item => {
+        if(!arr.includes(item)) {
+          arr.push(item)
+          return <TagItem item={item} />
+        }
+      
+      })
     )) : <small>No tag found!</small>}
   
 
