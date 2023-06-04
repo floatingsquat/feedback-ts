@@ -9,11 +9,11 @@
   right: 0;
   bottom: 0;
   position: fixed;
-  background-color: var(--dark-blue);
+  background-color: rgba(0,0,0,0.7);
 
   .content {
     width: 45%;
-
+    position:relative;
     background-color: var(--white);
     color: var(--black);
     padding: 50px 35px;

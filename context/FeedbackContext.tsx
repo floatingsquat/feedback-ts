@@ -1,6 +1,7 @@
 import React, { createContext, useReducer, useContext } from 'react';
 import { data } from '../data';
 import {FeedbackState, FeedbackDispatch, Action} from '../types'
+import { sortingTypeGenerator } from '../utils/helper';
 
 
 const FeedbackStateContext = createContext<FeedbackState | undefined>(undefined);
@@ -24,6 +25,9 @@ function feedbackReducer(state: FeedbackState, action: Action): FeedbackState {
       return state.filter(feedback => feedback.id !== action.id);
     case 'VOTE_FEEDBACK':
       return state.map((x)=> x.id === action.id ? {...x, vote:x.vote +1} : x)
+    case 'SORT_BY':
+      return sortingTypeGenerator(state, action.sortingType)
+      
     default: 
       console.error(`Unhandled action type`);
       return state;

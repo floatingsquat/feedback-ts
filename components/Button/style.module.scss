@@ -11,7 +11,9 @@
 }
 
 .buttonClose {
-  color: var(--white);
+  position: absolute;
+  right: 10px;
+  top: 0;
   padding: 15px;
   border-radius: 50px;
   color: black;
